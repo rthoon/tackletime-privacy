@@ -39,6 +39,9 @@
 <h3>AI consent</h3>
 <p>Before any photo or text is ever sent to a cloud AI service, TackleTime asks for your explicit permission. You can decline and use on-device text recognition (OCR) instead, or change this choice at any time under More &rarr; Notifications.</p>
 
+<h3>Medication interaction checking</h3>
+<p>If you use the "Check Interactions" feature, your medication names (not doses, indications, or any other personal information) are sent to openFDA, a free public database run by the U.S. Food and Drug Administration, to look up official drug label information. This lookup happens directly from your device to openFDA's public API. Medication names and this label information are then sent to Google's Gemini AI (subject to the same on-device-first, consent-gated process described above) to generate a plain-English safety summary. This feature is a screening aid only and is not a substitute for advice from your pharmacist or doctor.</p>
+
 <h2>Data Storage</h2>
 <p>All app data (alarms, medications, calendar cache, grocery lists, settings) is stored locally on your device. It is not backed up to any cloud service by the app itself, and Android's own automatic cloud backup is disabled for this app's data.</p>
 
@@ -47,6 +50,7 @@
 <ul>
   <li>Calendar reads and Google Sign-In authentication, sent directly to Google's own APIs under your Google Account.</li>
   <li>Photos/text sent to Google's Gemini AI API, only when on-device processing isn't available and only after you've given consent.</li>
+  <li>Medication names sent to openFDA (a public U.S. government database) and to Google's Gemini AI, only when you use the "Check Interactions" feature.</li>
 </ul>
 
 <h2>Your Choices</h2>
