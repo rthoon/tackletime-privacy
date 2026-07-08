@@ -20,7 +20,7 @@
 <p>TackleTime ("the app") is a personal alarm, medication reminder, calendar, grocery list, and task app for Android. This policy explains what data the app collects, how it's used, and how it's stored.</p>
 
 <h2>Summary</h2>
-<p>TackleTime is built to keep your data on your device by default. Nothing is collected for advertising, nothing is sold, and there is no TackleTime account or company server that your data is sent to. The only outside parties your data can ever reach are Google services that you explicitly connect (Google Sign-In/Calendar) or explicitly opt into (Gemini AI, used by several optional features listed below), plus openFDA for medication interaction lookups.</p>
+<p>TackleTime is built to keep your data on your device by default. Nothing is collected for advertising, nothing is sold, and there is no TackleTime account or company server that your personal app data is sent to. Data may reach Google services when you connect Google Calendar, consent to optional Gemini AI features, or when the app automatically sends limited crash diagnostics through Firebase Crashlytics. Medication names may also be sent to openFDA when you request an interaction check.</p>
 
 <h2>Data We Collect and How It's Used</h2>
 
@@ -46,6 +46,10 @@
 <h3>Medication interaction checking</h3>
 <p>If you use the "Check Interactions" feature, your medication names (not doses, indications, or any other personal information) are sent to openFDA, a free public database run by the U.S. Food and Drug Administration, to look up official drug label information. This lookup happens directly from your device to openFDA's public API. Medication names and this label information are then sent to Google's Gemini AI (subject to the same on-device-first, consent-gated process described above) to generate a plain-English safety summary. This feature is a screening aid only and is not a substitute for advice from your pharmacist or doctor.</p>
 
+<h3>Crash diagnostics</h3>
+<p>TackleTime uses Google Firebase Crashlytics to identify crashes, application-not-responding errors, and certain non-fatal technical failures so we can improve stability and alarm reliability. Crashlytics runs automatically and may send crash stack traces, relevant application state at the time of a failure, device and app metadata, and a randomly generated Crashlytics installation identifier to Google. TackleTime does not intentionally attach your name, email address, medication list, calendar contents, grocery lists, tasks, photos, or precise location to crash reports.</p>
+<p>Crashlytics data is used only for diagnosing and fixing technical problems, not for advertising or marketing. Google states that Crashlytics crash data and associated identifiers are retained for 90 days before removal begins. More information is available in <a href="https://firebase.google.com/support/privacy">Firebase's privacy and security documentation</a>.</p>
+
 <h3>Sharing a list or backup with someone else</h3>
 <p>The Grocery tab lets you share a single list, and More &rarr; Backup &amp; Restore lets you export all of your app data (alarms, medications, calendar rules, grocery lists, tasks, and settings) as a block of text. Both are entirely under your control: nothing is sent anywhere until you tap Share and choose where it goes through your device's own Share Sheet (e.g. Messages, email, Drive). TackleTime does not have a server to send this data to, and does not see or store a copy of it.</p>
 
@@ -58,6 +62,7 @@
   <li>Calendar reads and Google Sign-In authentication, sent directly to Google's own APIs under your Google Account.</li>
   <li>Photos or text (from your calendar, medications, groceries, or tasks) sent to Google's Gemini AI API, only when on-device processing isn't available and only after you've given consent &mdash; see "Photos" and "AI features" above for the full list of what this covers.</li>
   <li>Medication names sent to openFDA (a public U.S. government database) and to Google's Gemini AI, only when you use the "Check Interactions" feature.</li>
+  <li>Limited crash and diagnostic information sent automatically to Google Firebase Crashlytics to identify and fix crashes, application-not-responding errors, and non-fatal technical failures.</li>
   <li>Anything you explicitly export or share (a grocery list, a full backup), only when you tap Share yourself and only to wherever you choose to send it.</li>
 </ul>
 
