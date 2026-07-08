@@ -15,17 +15,17 @@
 <body>
 
 <h1>Privacy Policy for TackleTime</h1>
-<p class="updated">Last updated: July 5, 2026</p>
+<p class="updated">Last updated: July 8, 2026</p>
 
-<p>TackleTime ("the app") is a personal alarm, medication reminder, calendar, and grocery list app for Android. This policy explains what data the app collects, how it's used, and how it's stored.</p>
+<p>TackleTime ("the app") is a personal alarm, medication reminder, calendar, grocery list, and task app for Android. This policy explains what data the app collects, how it's used, and how it's stored.</p>
 
 <h2>Summary</h2>
-<p>TackleTime is built to keep your data on your device by default. Nothing is collected for advertising, nothing is sold, and there is no TackleTime account or company server that your data is sent to. The only outside parties your data can ever reach are Google services that you explicitly connect (Google Sign-In/Calendar) or explicitly opt into (Gemini AI for photo scanning).</p>
+<p>TackleTime is built to keep your data on your device by default. Nothing is collected for advertising, nothing is sold, and there is no TackleTime account or company server that your data is sent to. The only outside parties your data can ever reach are Google services that you explicitly connect (Google Sign-In/Calendar) or explicitly opt into (Gemini AI, used by several optional features listed below), plus openFDA for medication interaction lookups.</p>
 
 <h2>Data We Collect and How It's Used</h2>
 
 <h3>Medication and health information</h3>
-<p>Medication names, doses, schedules, and notes you enter are stored only on your device. This data is never uploaded to any server we operate &mdash; there isn't one. It's used solely to power reminders, adherence tracking, and the optional AI features described below.</p>
+<p>Medication names, doses, schedules, and notes you enter are stored on your device and are never uploaded to any server we operate &mdash; there isn't one. This data powers reminders, adherence tracking, and refill alerts entirely on-device. Two optional AI features send medication data to Google's Gemini AI, described in "AI features" below; both are off unless you've given consent, and neither is required to use the app.</p>
 
 <h3>Calendar and account information</h3>
 <p>If you choose to sign in with Google, TackleTime requests read-only access to your Google Calendar so it can display your events and let you set alarms for them. We also receive your name, email, and profile photo from Google Sign-In to show you're signed in. This information is used only within the app; it is not shared with any third party and is not stored on any server other than Google's own, which you already control through your Google Account.</p>
@@ -33,24 +33,32 @@
 <h3>Location</h3>
 <p>If you set up a grocery store location, the app stores that location on your device to detect when you're nearby (geofencing) and show a reminder notification. Location is checked only while the app is in use unless you explicitly turn on "Background Alerts" for a store, which is off by default. Your location is never transmitted anywhere &mdash; it's compared to your saved store locations entirely on your device.</p>
 
-<h3>Photos (medication labels, medication lists, grocery lists)</h3>
-<p>When you use a photo-scan feature, the photo is processed to extract text. TackleTime tries on-device processing first, which never leaves your phone. If your device doesn't support on-device AI, and you've given consent (see below), the photo may be sent to Google's Gemini AI cloud service to extract the same information. Photos are not stored by TackleTime after processing and are not used for any purpose other than fulfilling your scan request.</p>
+<h3>Photos (medication labels, medication lists, grocery lists, receipts, recipes, pantry contents)</h3>
+<p>When you use a photo-scan feature &mdash; medication label/list scanning, grocery list scanning, receipt scanning, recipe scanning, or pantry/fridge checking &mdash; the photo is processed to extract information. TackleTime tries on-device processing first, which never leaves your phone. If your device doesn't support on-device AI, and you've given consent (see below), the photo may be sent to Google's Gemini AI cloud service to extract the same information. The photo itself is not stored by TackleTime after processing.</p>
+<p>For most scans, only the extracted result (e.g. a medication draft, a grocery item list) is kept, and nothing else about the photo is retained. <strong>Receipt scanning is the one exception</strong>: the store name, purchase date, total, and individual item prices extracted from a receipt are saved on your device as purchase history, so the app can show spending insights and suggest when you're likely due to restock an item. This history stays local &mdash; it is not sent anywhere beyond the one-time Gemini extraction call described above &mdash; but unlike other scans, it is retained rather than discarded after the scan completes. You can see and clear this history in the Grocery tab's Insights panel.</p>
+
+<h3>AI features that generate summaries or suggestions</h3>
+<p>Several optional features send text from your own data &mdash; calendar events, medication names/notes, task titles, or grocery items &mdash; to Google's Gemini AI to generate a summary, checklist, or suggestion: "Plan My Day" and "Events Briefing" (calendar/medication/grocery/task summaries), "Sort by Category" (medication classification), "Break Down Task" (task-to-subtask suggestions), "Smart List" and "AI Edit" (grocery list suggestions/edits), and "Quick Add" (turning a typed sentence into an alarm or task). All of these are subject to the same on-device-first, consent-gated process as photo scans &mdash; nothing is sent unless you've given AI consent, and each feature has a manual, non-AI way to do the same thing (typing the alarm/task in directly, editing the grocery list by hand, etc.) if you'd rather not use it.</p>
 
 <h3>AI consent</h3>
-<p>Before any photo or text is ever sent to a cloud AI service, TackleTime asks for your explicit permission. You can decline and use on-device text recognition (OCR) instead, or change this choice at any time under More &rarr; Notifications.</p>
+<p>Before any photo or text is ever sent to a cloud AI service, TackleTime asks for your explicit permission. You can decline and use on-device text recognition (OCR) or manual entry instead, or change this choice at any time under More &rarr; Notifications.</p>
 
 <h3>Medication interaction checking</h3>
 <p>If you use the "Check Interactions" feature, your medication names (not doses, indications, or any other personal information) are sent to openFDA, a free public database run by the U.S. Food and Drug Administration, to look up official drug label information. This lookup happens directly from your device to openFDA's public API. Medication names and this label information are then sent to Google's Gemini AI (subject to the same on-device-first, consent-gated process described above) to generate a plain-English safety summary. This feature is a screening aid only and is not a substitute for advice from your pharmacist or doctor.</p>
 
+<h3>Sharing a list or backup with someone else</h3>
+<p>The Grocery tab lets you share a single list, and More &rarr; Backup &amp; Restore lets you export all of your app data (alarms, medications, calendar rules, grocery lists, tasks, and settings) as a block of text. Both are entirely under your control: nothing is sent anywhere until you tap Share and choose where it goes through your device's own Share Sheet (e.g. Messages, email, Drive). TackleTime does not have a server to send this data to, and does not see or store a copy of it.</p>
+
 <h2>Data Storage</h2>
-<p>All app data (alarms, medications, calendar cache, grocery lists, settings) is stored locally on your device. It is not backed up to any cloud service by the app itself, and Android's own automatic cloud backup is disabled for this app's data.</p>
+<p>All app data (alarms, medications, calendar cache, grocery lists, purchase history, tasks, settings) is stored locally on your device. It is not backed up to any cloud service by the app itself, and Android's own automatic cloud backup is disabled for this app's data.</p>
 
 <h2>Data Sharing</h2>
 <p>We do not sell, rent, or share your data with third parties for advertising or marketing purposes. The only data that ever leaves your device is:</p>
 <ul>
   <li>Calendar reads and Google Sign-In authentication, sent directly to Google's own APIs under your Google Account.</li>
-  <li>Photos/text sent to Google's Gemini AI API, only when on-device processing isn't available and only after you've given consent.</li>
+  <li>Photos or text (from your calendar, medications, groceries, or tasks) sent to Google's Gemini AI API, only when on-device processing isn't available and only after you've given consent &mdash; see "Photos" and "AI features" above for the full list of what this covers.</li>
   <li>Medication names sent to openFDA (a public U.S. government database) and to Google's Gemini AI, only when you use the "Check Interactions" feature.</li>
+  <li>Anything you explicitly export or share (a grocery list, a full backup), only when you tap Share yourself and only to wherever you choose to send it.</li>
 </ul>
 
 <h2>Your Choices</h2>
